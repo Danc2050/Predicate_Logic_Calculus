@@ -1,0 +1,25 @@
+▣ ▣ ▣ Existential Inference Rules ▣ ▣ ▣
+
+▣▣▣Existential Introduction▣▣▣
+Existential is an easier introduction rule to follow than Existential. It contains all the same rules, with the
+exception that:
+1. It places no restrictions on previous occurances of any name letter in hypotheses or premises.
+2. Only one name letter may be replaced if it is useful for your proof.
+Thus, the following proof would be legal:
+1. Fa ^ Ga      given
+2. ∃x(Fx^Gx)    1, EI
+
+▣▣▣Existential Elimination▣▣▣
+Unfortunately, some complexity is introduced when we eliminate existential quantifiers! Like universal introduction,
+we must make an assumption. Equally, the name letter must not occur in the proof.
+
+Take the following example as what not to do.
+
+1. ∀y∃yFyx          given
+2. ∃yFya            1, UE
+3. | Faa            H
+4. | ∃xFxx          3, EI
+5. ∃xFxx            2, 3-4 EE
+
+Notice, that the name letter a on line 3, already occurs in line 2. Therefore, this breaks our previously stated rule
+and this proof is invalid.

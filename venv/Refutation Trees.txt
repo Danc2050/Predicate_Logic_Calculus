@@ -1,0 +1,129 @@
+▣▣▣Refutation Trees in Predicate Logic▣▣▣
+Testing for validity in predicate logic is not as easy as propositional logic.
+There can be many instantiations of a statement and thus the truth table can be large.
+Refutation trees are an exhaustive search for ways in which all wffs in your statement can be true.
+
+Specifically, refutation trees test for the validity of a negated conclusion. If such a test yields to be
+true, then your original conclusion is contradicted, and thus not valid. If, on the other hand the result is
+false in every case, then your original conclusion, with premises, are valid.
+
+#Citation -- Professor Leila Hawana CS251-001 Fall Term 2018
+▣▣▣Refutation Rules▣▣▣
+Below is a list of rules you will use to negate your original conclusion and test for validity. Read over them, but
+go back over them once you read the rest of this section and work on some examples of your own.
+
+Negation (-): If an open path contains both a formula and its negation, place an ' X ' at the
+bottom of the path.
+Negated Negation (- -): If an open path contains an unchecked wff of the form
+check
+it and write at the bottom of every open path that contains this newly checked wff.
+Coniunction (&): If an open path contains an unchecked wff of the form & $, check it and
+write and $ at the bottom of every open path that contains this newly checked wff.
+Negated Conjunction (-&): If an open path contains an unchecked wff of the form -(+ & $),
+check it and split the bottom of each open path containing this newly checked wff into two
+and a t the end of the second of which
+branches, a t the end of the first of which write
+write -$.
+Disjunction (v): If an open path contains an unchecked wff of the form v $, check it and
+split the bottom of each open path containing this newly checked wff into two branches, at
+the end of the first of which write 4 and at the end of the second of which write $.
+Negated Disiunction (-v): If an open path contains an unchecked wff of the form -(+ v $),
+check it and write both
+and -$ at the bottom of every open path that contains this
+newly checked wff.
+If an open path contains an unchecked wff of the form -. $, check it and
+Conditional
+split the bottom of each open path containing this newly checked wff into two branches, at
+the end of the first of which write
+and at the end of' the second of which write $.
+Negated Conditional
+If an open path contains an unchecked wff of the form -(+ -+ $),
+check it and write both and -$ at the bottom of every open path that contains this newly
+checked wff.
+Biconditional (-):
+If an open path contains an unchecked wff of the form
+$, check it and
+split the bottom of each open path containing this newly checked wff into two branches, at
+the end of the first of which write both and $, and at the end of the second of which
+and -Jr.
+write both
+Negated Biconditional (--):
+If an open path contains an unchecked wff of the form
+-(+
+$), check it and split the bottom of each open path containing this newly checked
+wff into two branches, at the end of the first of which write both and -$, and at the end
+of the second of which write both
+and $.
+
+▣▣▣To begin▣▣▣
+Start by listing all the premises in row-order. Next, write the NEGATED conclusion in its own row.
+Next, use refutation rules to find an instantiation of the statement(s). If you have ∀x for some
+Symbol (e.g., Fx), then x can be any letter (e.g., 'a').
+
+Using the aforementioned rules, different paths/branches are created. As you apply each rule to a premise or conclusion,
+put a checkmark next to the corresponding row. As each path is opened up, you use rules to simplify each premise and
+conclusion in each path/branch.
+
+▣▣▣Assesing Validity▣▣▣
+If you do so for all the premises and conclusions and all branches are closed with no more rules to apply, then the
+attempt to contradict your conclusion is false, and your original proof is valid.
+
+If on the other hand there remains open branches with no rules to apply, the contradiction still holds true in some case
+(otherwise we would have closed a branch because a contradiction occured). If we were using propositional logic using
+truth tables, we would say that there is some case where the premises are true and the conclusion false in your original
+statement.
+
+▣▣▣Worked Examples▣▣▣
+Below are some worked examples. Feel free to write down the problems and work on them on your own. To do so, simply
+write down the initial premises and negated conclusion (it should already be negated for you) and apply the rules. Use
+these examples to check your work.
+
+Refutation Tree Example 1:
+
+1          ∀x∀y(Fxy->~Fyx)
+2      ✓   ~~∃xFxx
+3      ✓   ∃xFxx                       2 ~~
+4          Faa                         3 ∃
+5          ∀y(Fay -> ~Fya)             1 ∀
+6      ✓   Faa -> ~ Faa                5 ∀
+          /             \
+         /               \
+        /                 \
+7   ~Faa    6 ->           ~Faa        6 ->
+8   X       4, 7 ~         X           4, 7 ~
+
+
+Above is the completed refutation tree, with the result that every branch closes.
+This is the indicator that the form is valid.
+
+
+Refutation Tree Example 2:
+
+1      ✓   ∃x∃yLxy
+2      ✓   ~∃xLxx
+3      ✓   ∃yLay                       1 ∃
+4          Lab                         3 ∃
+5          ∀x~Lxx                      2 ~∃
+6          ~Laa                        5 ∀
+7          ~Lbb                        6 ∀
+
+Above is the completed refutation tree, with the result that every branch closes (the contradiction is false).
+This is the indicator that the original conclusion is valid.
+
+Refutation Tree Example 3:
+
+1      ✓   ∀x∃yLxy
+2      ✓   ~Laa
+3      ✓   ∃yLay                       1 ∃
+4          Lab                         3 ∃
+5          ∃yLby                       2 ~∃
+6          Lbc                         5 ∀
+7          ∃yLcy                       6 ∀
+8          Lcd                         7 ∃
+           .
+           .
+           .
+
+In this example, we start with our premises ∀x∃yLxy and ~Laa. We try to find a closed branch for the premise, but are
+unable to do so for all cases because there can be many instances of ∀x∃yLxy, nearly all of which do not contradict
+previous premises. Thus, the original premise -- Laa is invalid.

@@ -1,0 +1,19 @@
+▣ ▣ ▣ Predicate Calculus Intro ▣ ▣ ▣
+
+Like propositional logic, we can form truth tables with predicates.
+The benefit is -- we need learn only four new rules!
+
+Consider the example below:
+
+~Fa V ∃xFx, ∃xFx -> P ⊧ Fa -> P
+
+1. ~Fa V ∃xFx       given
+2. ∃xFx->p          given
+3. | Fa             H
+4. | ~~Fa           3, DN
+5. | ∃xFx           1,4 DS
+6. |P               2,5 MP
+7. Fa -> P          3-6CI
+
+Notice: We didn't use any new rules that weren't in our toolset.
+However, there are four new rules you need to know that are detailed in this section.

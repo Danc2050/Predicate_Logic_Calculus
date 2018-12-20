@@ -1,0 +1,10 @@
+▣▣▣Identity Is Tricky▣▣▣
+Logic never really deviates from English as much as one might think. Take the example of a chair. Is a chair
+also a seat? The answer is yes. To indicate this in Logic, we use the '=' combined with quantification. The
+example in predicate logic is ∀x x = s, where x is a chair and s = a seat.
+
+Careful! Are all seats chairs? No! Think about couches, or beds, etc. Thus, saying ∀x x = c, where c is chair
+and x is a seat is wrong! Instead, we could say ∃x x = c and be correct, because some seats are chairs.
+
+In addition to saying something is something in Logic, we can also say it is not. For instance
+∀x ~x= p where x = the universe of seats and p = the universe of plants.

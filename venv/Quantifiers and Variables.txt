@@ -1,0 +1,21 @@
+▣▣▣ Quantifiers and Variables ▣▣▣
+▣ Quantifiers come in two shapes and sizes : Universal and Existential. In English, the Universal quantifier means
+"for all" or "for every". Likewise, the Existential quantifier means "for some" or "there is some" Rather than the
+usual English words used, logicians and mathematicians exchange ∀ to mean 'for all' and ∃ to mean 'there is some'.
+
+▣ So to say something like "There are some cookies on every table", one may define T = a table, C = a cookie, and say
+∃x (Tx -> Cx). The subscript x implies a collection of objects -- called a universe. Universes can be any subscript
+between the middle of the alphabet 'r' and the end 'z'.
+
+▣ Another example, to say "There is someone loved by everyone in the universe" one could define L = is loved
+loved by and say ∀y∃x(Lxy).
+
+▣ Similarly, if one said ∀xPx (or, said another way ∀xP (x)) it would mean for every X in that universe, P would be true
+-- no matter what P implies. One can also say it differently and reach logical equivalence -- indicated by the
+bi-conditional sign ⇔ between the two statements. In this example, ¬∃x¬P (x) means the same thing logically. In English,
+we would say "there is not some X where P(x) is not true".
+
+▣ The same can be said when swapping the quantifiers. For instance, ∃xP (x) ⇔ ¬∀xP (x). In English: "there is some x such
+that P of some x is true" is equivalent to "P(x) is not true for all of x".
+
+▣ Try out the quiz in this section when you gain confidence in other sub-modules of predicate logic to test your skills.

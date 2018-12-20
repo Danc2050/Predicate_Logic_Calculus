@@ -1,0 +1,39 @@
+▣ ▣ ▣ Universal Inference Rules ▣ ▣ ▣
+
+
+▣▣▣Universal Elimination▣▣▣
+When setting up a two-column proof table, to get to the conclusion, a useful tool is to substitute
+a name letter in the place of a generalized quantifier. For example, take the below proof:
+1. ∀x(Fx->Gx)   given
+2. ∀xFx         given
+3. Fa->Ga       1, UE
+4. Fa           2, UE
+5. Ga           3,4 MP
+In this proof, we must get to conclusion Ga. However, the universal quantifier is "in our way" and
+we need to substitute an actual instance of x in order to prove that Ga is a possible conclusion out
+of the universe of x. We do this twice in this proof with the letter UE - which stands for
+'Universal elimination'. Consider this a new tool to use when conducting two-column proofs with predicate
+logic.
+
+▣▣▣Universal Introduction▣▣▣
+If we can eliminate a quantifier, surely we can bring it back into the proof, right? The process is the same
+as universal elimination in reverse, but with one special condition: we must create a subproof (i.e., an assumption).
+The assumption tell us one thing: that some statement is true for an arbitrary constant in our universe. Once a
+subproof has begun, we can continue to use our previous rules on premises to verify this statement and introduce
+our quantifier.
+See the below proof as an example:
+
+1. ~Fa            given
+2. | ∀xFx         H
+3. | Fa           1, UE
+4. | Fa ^ ~Fa     2, UE
+5. ~ ∀xFx         3,4 MP
+
+Notice a few more requirements:
+1. The name letter a does not appear in any other assumptions
+2. The name letter does not appear in any other hypothesis prior to the line 2 hypothesis
+
+A few rules that this example does not show are:
+1. We must replace every instance of x when introducing a universal quantifier.
+2. We may replace only one name letter when introducing a quantifier, with the exception that we must replace the
+   leftmost occurance first (e.g., ∀xFax).

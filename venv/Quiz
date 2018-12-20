@@ -1,0 +1,26 @@
+Answer the following true/false.
+1 ∀xP (x) ⇔ ¬∃x¬P (x)
+2 ∃xP (x) ⇔ ¬∀xP (x)
+3 ∀x∃yP (x, y) ⇔ ∃y∀xP (x, y)
+4 ∃! x p(x) ⇔ ∃ x (p(x) ∧ ∀ y ((x 6 = y) → ¬p(y))
+Let the universe of discourse for the variable n be N (all integers ≥ 0) and p(n)=”n is prime” e(n)= ”n is even.”
+5 ∀ n ∃ m ((¬e(n) ∧ n 6 = m) → e(n + m)) = For each odd natural number there is a different natural number sum of which two is even.
+6 ∀ m ∀ n ((p(m) ∧ p(n) ∧ m 6 = 2 ∧ n 6 = 2) → e(m + n)) = Sum of any two prime numbers except the prime number 2 is even.
+7 Answer the following multiple choice question: Universe of discourse for the variable x is all students.
+C(x): x is taking CSE 260.
+M(x): X is a CSE major.
+∀x(M (x) ∧ C(x)) in English is
+(a) Every student is a CSE major and they all are taking CSE 260.
+(b) Every CSE student is taking CSE 260.
+(c) None of the above.
+
+Translate each of the following statements into logical expressions using predicates, quantifiers, and logical connectives.
+predicates:
+C(x): x is a CSE 260 student
+L(x): x loves music
+Universe of discourse for the variable x is all students.
+8 Every student loves music = ∀ x L(x)
+9 No student loves music = ¬∀ x L(x)
+10 Some students love music = L(x) ∀x
+11 Every CSE 260 student loves music = ∀ x (C(x) → L(x))
+12 Some CSE 260 students love music = ∃ x (C(x) → L(x))

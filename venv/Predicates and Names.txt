@@ -1,0 +1,21 @@
+▣▣▣Predicates▣▣▣
+Predicates can be any verb with a truth value. For instance 'Loves' could be symbolized with the
+letter L. 'Rides a bike' could be symbolized with R.
+
+To say someone rides a bike, use a general letter such as x. This would look like Rx. Or if you
+wanted to be really general you can say ∀xRx (All x's ride bikes!).
+
+There is such a thing as two-three-(and so on)-place predicates as well -- called relational predicates.
+Back to love, if there is some x and some y, then you could say Lxy to indicate the English equivalent "x loves y".
+You can again make it more general and say ∃x∃yLxy which in English means "there is some x where x loves some y."
+
+▣▣▣Naming Conventions▣▣▣
+Like anything in English, Logic has its own naming conventions as well.
+Names can be any lowercase letter from the beginning (a) to the middle of the alphabet(r).
+Thus, if we aren't sick of the love example, now we can place real names for x and y. If s = Susie and
+r = Roger, we can say Lsr to mean susie loves roger. If Roger is a ladies man, we could even say ∀xLxr to
+mean that everyone in the universe of x loves Roger.
+
+In addition, commmon nouns can replace specific names. The letter 'r' could equal Roosters, Roads, or whatever we'd
+like.
+

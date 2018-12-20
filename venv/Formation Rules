@@ -1,0 +1,18 @@
+▣▣▣Forming Formulas▣▣▣
+Creating formulas comes with its own rules in addition to all other rules you are learning.
+
+For example, a well-formed formula (one that follows the rules), contains these four properties:
+1. Has a predicate letter (e.g., P, R, etc.) followed by 0 or more name letters (e.g., Px, Ry).
+2. Its contrapositive is a wff (if R is a wff, so is ~R).
+3. If a connective of two wff are wff individually, they are as a whole (e.g., P ^ Q).
+4. If a predicate letter (e.g., R) is a wff, then any instance of that letter is a wff (Pa, Pb, Px).
+   More formally -- ∀BP(b/a) or ∃bP(b/a) where a is replaced by b.
+
+▣▣▣Practice▣▣▣
+Are these well formed formulas? Give it a try (block the right half of the page)
+
+1.∃x(~Fx ^ ∀zGzx)  ------------------------------------------no, Gzx needs parens
+2.~∃x(~Fx ^ ∀z(Gzx)) ------------------------------------------yes
+3.∀z(Gza) ------------------------------------------yes
+4.∀xFxGy ------------------------------------------ no, y is not quantified
+

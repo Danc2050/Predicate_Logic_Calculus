@@ -1,0 +1,14 @@
+▣ ▣ ▣ Inference Rules for Identity Predicates ▣ ▣ ▣
+
+▣▣▣Identity Introduction and Elimination▣▣▣
+If any name letter has identity with another name letter -- e.g., a = b -- then we can substitute that variable anywhere
+in our proof. We write the rule IE (identity elimination) to show this rule.
+Prove ∀x∀y(x=y->y=x)
+
+1. | a=b            H
+2. | a=a            ||
+3. | b=a            1,2 IE
+4. a=b -> b=a       1,3 CI
+5. ∀y(a=y->y=a)     4, UI
+6. ∀x∀y(x=y->y=x)   5, UI
+

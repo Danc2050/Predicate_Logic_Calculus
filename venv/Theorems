@@ -1,0 +1,22 @@
+▣ ▣ ▣ Inference Rules for Identity Predicates ▣ ▣ ▣
+
+▣▣▣Equivalencies▣▣▣
+Equivalencies will make your life easier when writing two-column proofs -- even refutation trees. To make use of this,
+remember back to the earlier tutorial on Quantifiers. Here we noted that to say "for all x" also implies "there is some
+x" where some predicate is true. Here, we lay out all equivalencies for the reader to use for their own proofs:
+
+1. ~∀x~Fx ⇔ ∃xFx
+2. ~∀xFx ⇔ ∃x~Fx
+3. ∀x~Fx ⇔ ~∃xFx
+4. ∀xFx ⇔ ~∃x~Fx
+
+An example proof below demonstrates some of these rules:
+
+1. | ∀xFx^∃x~Fx)  H
+2. | ∀xFx         1, Specialization
+3. | ∃x~Fx        1, Specialization
+4. |   |~Fa       H
+5. |   | Fa       2, UE
+6. |   | P ^ ~P   4,5 Contradiction
+7. |P ^ ~P        3, 4-6 EE
+8. ~(∀xFx^∃x~Fx)  1-7 NI
