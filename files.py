@@ -25,6 +25,6 @@ def open_filePC(location, x):
     if (x == 3): location = find_file("Inference Rules - Identity")
     if (x == 4): location = find_file("Theorems")
     if (x == 5): return()
-    print(location)
+
     f = open(location, 'r')
     for line in f: print(line)
